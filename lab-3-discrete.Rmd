@@ -17,7 +17,7 @@ library(tidyverse)
 
 ## Bernoulli and Binomial Distributions
 
-Functions `dbinom`,`pbinom`,`qbinom`,`rbinom`
+Functions `dbinom`,`pbinom`,`qbinom`,`rbino`
 
 ### Binomial
 
@@ -28,9 +28,28 @@ Data collected by the Substance Abuse and Mental Health Services Administration 
 Write text below:
 
 1. What distribution does the number of 18-20 that consumed alcohol follow?
+
+Binomial distribution.
+
 2. What is the expected value of this distribution?
+
+```{r}
+n1 <- 10
+p1 <- 0.697
+
+n1*p1
+```
+
+
+6.97.
+
 3. What is the variance of this distribution?
 
+```{r}
+n1*p1*(1-p1)
+```
+
+The variance is 2.11.
 
 \newpage
 
@@ -38,17 +57,40 @@ Write code below:
 
 4. What is the probability that exactly 5 out of 10 18-20 year olds have consumed an alcoholic beverage?
 
+```{r}
+dbinom(x=5,size=10,prob=0.697)
+```
+
+The probability is 0.11.
 
 5. What is the probability that at most 3 out of 10 randomly sampled 18-20 year olds have consumed
 alcoholic beverages?
 
+```{r}
+pbinom(q=3,size=10,prob = 0.697)
+```
+
+The probability is 0.01.
+
 6. What is the probability that at least 6 out of 10 randomly sampled 18-20 year olds have consumed
 alcoholic beverages?
 
+```{r}
+1-pbinom(q=5, size=10, prob=0.697)
+```
+
+The probability is 0.84
+
 7. What is the median of this distribution?
 
+```{r}
+qbinom(p=0.5, size=10, prob=0.697)
+```
+
+The median is 7.
 
 You can also randomly generate samples using a binomial distribution.
+
 
 \newpage
 
