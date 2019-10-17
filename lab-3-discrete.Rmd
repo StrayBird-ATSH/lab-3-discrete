@@ -133,7 +133,7 @@ dgeom(x=9, prob = 0.3)
 11. What is the probability that the first defective bulb is found after the first 3 bulbs are checked?
 
 ```{r}
-1-pgeom(q=3,prob=0.3)
+1-pgeom(q=2,prob=0.3)
 
 ```
 
