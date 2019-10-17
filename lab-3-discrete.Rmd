@@ -119,7 +119,7 @@ Geometric
 1/0.3
 ```
 
-
+The expected number is 3.33.
 
 10. What is the probability that the tenth lightbulb is the first defective bulb?
 
